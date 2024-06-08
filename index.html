@@ -11,8 +11,8 @@
 </style>
 </head>
 <body class="bg-cover bg-center" style="background-image: url('img/Texturelightblue-45deg.png');">
-    <main class="w-full h-full max-w-[1600px] flex items-center justify-center mx-auto">
-        <div x-data="imageSlider" class="relative mx-auto w-full max-w-6xl overflow-hidden rounded-md bg-[#181F42] p-6 h-[600px]">
+    <main class="w-full h-full max-h-[1500px] max-w-[1600px] flex items-center justify-center mx-auto">
+        <div x-data="imageSlider" class="relative mx-auto w-full max-w-6xl overflow-hidden rounded-md bg-[#181F42] p-6 h-[800px] max-h-[1000px] md:h-[600px]">
             <div class="absolute right-0 top-0 z-10 rounded-tr-md bg-[#355BAD] px-3 py-1 text-center text-sm text-white">
                 <span x-text="currentIndex"></span>/<span x-text="slides.length"></span>
             </div>
@@ -33,7 +33,7 @@
                             <p class="text-white text-xl font-semibold" x-text="slide.text"></p>
                         </div>
                         <div class="flex items-center justify-center">
-                            <img :src="slide.image" alt="slide image" class="rounded-sm w-full h-full object-cover" />
+                            <img :src="slide.image" alt="slide image" class="rounded-sm w-full h-full object-scale-down" />
                         </div>
                     </div>
                 </template>
